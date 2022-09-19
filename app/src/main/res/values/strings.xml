@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">BikeaGb</string>
+      <string name="title_core">Core</string>
 </resources>
