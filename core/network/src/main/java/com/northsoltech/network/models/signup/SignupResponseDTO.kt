@@ -7,8 +7,6 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class SignupResponseDTO(
-    @SerialName("data")
-    var dataDTO: DataDTO?,
     @SerialName("message")
     var message: String?,
     @SerialName("statusCode")
@@ -16,7 +14,6 @@ data class SignupResponseDTO(
 ) {
 
     fun toDomain() = SignupResponse(
-        data = null,
         message = message,
         statusCode = statusCode
     )

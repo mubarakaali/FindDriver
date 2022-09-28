@@ -18,6 +18,8 @@ internal object NetworkUtils {
     fun getErrorMessage(httpCode: Int) = when (httpCode) {
         // User unauthorised error
         401 -> "You have been unauthorized."
+        404 -> "Not Found"
+        204 -> "User Not exist"
         // Time out error
         408 -> "Request timed out. Try again."
         // Internal server error

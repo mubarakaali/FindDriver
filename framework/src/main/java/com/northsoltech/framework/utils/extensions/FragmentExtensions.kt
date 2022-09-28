@@ -8,11 +8,15 @@ import androidx.navigation.fragment.findNavController
 
 const val JE_TAG = "jejeje"
 
-fun Fragment.safelyNavigate(navDirections: NavDirections,navExtras: Navigator.Extras?=null){
+fun Fragment.safelyNavigate(directions: NavDirections, navigatorExtras: Navigator.Extras? = null) {
     try {
-        if (navExtras!=null) findNavController().navigate(navDirections,navExtras)
-        else findNavController().navigate(navDirections)
-    }catch (e:Exception){
+        if (navigatorExtras != null) findNavController().navigate(directions, navigatorExtras)
+        else findNavController().navigate(directions)
+    } catch (e: IllegalStateException) {
+        e.printStackTrace()
+        Log.d(JE_TAG, "safelyNavigate:...... $e")
+    } catch (e: IllegalArgumentException) {
+        e.printStackTrace()
         Log.d(JE_TAG, "safelyNavigate:...... $e")
     }
 

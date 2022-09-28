@@ -8,6 +8,7 @@ fun BikeTheme(content: @Composable () -> Unit) {
     MaterialTheme(
         colors = colors,
         typography = typography,
+        shapes = Shapes,
         content = content
     )
 }

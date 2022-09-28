@@ -3,5 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/frame_nav_graph"
     app:startDestination="@id/app_nav_graph">
-<include app:graph = "@navigation/app_nav_graph"/>
+
+    <include app:graph="@navigation/app_nav_graph" />
+    <include app:graph="@navigation/sign_nav_graph" />
+
+    <action
+        android:id="@+id/global_action_to_onboarding"
+        app:destination="@id/sign_nav_graph"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popUpTo="@id/frame_nav_graph"
+        app:popUpToInclusive="true" />
 </navigation>

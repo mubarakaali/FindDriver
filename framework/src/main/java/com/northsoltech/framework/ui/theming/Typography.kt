@@ -4,66 +4,65 @@ import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import com.northsoltech.framework.R as FrameworkR
 
-val Gilroy = FontFamily(
-    Font(FrameworkR.font.gilroy_regular),
-    Font(FrameworkR.font.gilroy_semibold, weight = FontWeight.SemiBold),
-    Font(FrameworkR.font.gilroy_bold, weight = FontWeight.Bold),
+val font = FontFamily(
+    Font(resId = FrameworkR.font.poppins_light, weight = FontWeight.ExtraLight, style = FontStyle.Normal),
+    Font(resId = FrameworkR.font.poppins_black, weight = FontWeight.Black, style = FontStyle.Normal),
+    Font(resId = FrameworkR.font.poppins_regular, weight = FontWeight.Normal, style = FontStyle.Normal),
+    Font(resId = FrameworkR.font.poppin_medium, weight = FontWeight.Medium, style = FontStyle.Normal),
+    Font(resId = FrameworkR.font.poppins_bold, weight = FontWeight.SemiBold, style = FontStyle.Normal),
+    Font(resId = FrameworkR.font.poppins_extra_bold, weight = FontWeight.Bold, style = FontStyle.Normal),
 )
 
+// Set of Material typography styles to start with
 val typography = Typography(
-    defaultFontFamily = Gilroy,
     h1 = TextStyle(
-        fontFamily = Gilroy,
-        fontWeight = FontWeight.Bold,
-        fontSize = 38.sp
+        fontWeight = FontWeight.Black,
+        fontSize = 35.sp
     ),
     h2 = TextStyle(
-        fontFamily = Gilroy,
         fontWeight = FontWeight.Bold,
-        fontSize = 30.sp
+        fontSize = 32.sp
     ),
     h3 = TextStyle(
-        fontFamily = Gilroy,
         fontWeight = FontWeight.Bold,
-        fontSize = 20.sp
+        fontSize = 28.sp
     ),
     h4 = TextStyle(
-        fontFamily = Gilroy,
-        fontWeight = FontWeight.Bold,
-        fontSize = 18.sp
+        fontWeight = FontWeight.SemiBold,
+        fontSize = 25.sp
     ),
     h5 = TextStyle(
-        fontFamily = Gilroy,
-        fontWeight = FontWeight.Bold,
-        fontSize = 16.sp
-    ),
-    h6 = TextStyle(
-        fontFamily = Gilroy,
-        fontWeight = FontWeight.Bold,
-        fontSize = 14.sp
-    ),
-    subtitle1 = TextStyle(
-        fontFamily = Gilroy,
         fontWeight = FontWeight.SemiBold,
-        fontSize = 18.sp
-    ),
-    subtitle2 = TextStyle(
-        fontFamily = Gilroy,
-        fontWeight = FontWeight.SemiBold,
-        fontSize = 14.sp
+        fontSize = 22.sp
     ),
     body1 = TextStyle(
-        fontFamily = Gilroy,
-        fontWeight = FontWeight.Normal,
-        fontSize = 12.sp
+        fontWeight = FontWeight.SemiBold,
+        fontSize = 17.sp
     ),
     body2 = TextStyle(
-        fontFamily = Gilroy,
-        fontWeight = FontWeight.Normal,
-        fontSize = 10.sp
+        fontWeight = FontWeight.Medium,
+        fontSize = 16.sp
     ),
+    button = TextStyle(
+        fontWeight = FontWeight.SemiBold,
+        fontSize = 19.sp
+    ),
+    caption = TextStyle(
+        fontWeight = FontWeight.Normal,
+        fontSize = 16.sp
+    ),
+    subtitle1 = TextStyle(
+        fontWeight = FontWeight.Light,
+        fontSize = 15.sp
+    ),
+    subtitle2 = TextStyle(
+        fontWeight = FontWeight.Light,
+        fontSize = 14.sp
+    ),
+    defaultFontFamily = font,
 )
