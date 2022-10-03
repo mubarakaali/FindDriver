@@ -4,7 +4,7 @@ It's an app built using the MVVM, Repository pattern and Clean Architecture with
 
 <br/>
 
-##Index
+## Index
 
 - [Key Features](#key-features)
 - [Architecture](#architecture)
@@ -93,8 +93,8 @@ This is implemented as per [Google's recommendation](https://developer.android.c
 
 ## Screenshots
 
-<img src="images/splash.png" width=200> <img src="images/login.png" width=200> 
-<img src="images/usertype.png" width=200> <img src="images/usertype.png" width=200>
+<img src="images/splash.jpg" width=200> <img src="images/login.jpg" width=200> 
+<img src="images/usertype.jpg" width=200> <img src="images/registration.jpg" width=200>
 
 <br/>
 
