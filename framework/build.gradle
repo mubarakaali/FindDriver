@@ -44,24 +44,22 @@ android {
 
 dependencies {
 
-//    api "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     api "androidx.core:core-ktx:$core_version"
     api "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutine_version"
     api 'org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.6.2'
-
-    implementation "com.google.dagger:hilt-android:$hilt_version"
+//   Hilt
+    api "com.google.dagger:hilt-android:$hilt_version"
     kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
-
-    api "androidx.fragment:fragment-ktx:$fragment_version"
-
+//    DataStore
+    implementation("androidx.datastore:datastore-preferences:$datastore_version")
+    implementation("androidx.datastore:datastore:$datastore_version")
+//  lifecycle
     api "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
     api "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
     api "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
     api "androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycle_version"
-//    api "androidx.lifecycle:lifecycle-viewmodel-compose:$compose_view_model_version"
 
-
-
+    api "androidx.fragment:fragment-ktx:$fragment_version"
     api "androidx.navigation:navigation-fragment-ktx:$nav_version"
     api "androidx.navigation:navigation-ui-ktx:$nav_version"
     api "androidx.navigation:navigation-dynamic-features-fragment:$nav_version"
@@ -75,16 +73,12 @@ dependencies {
 
     api "androidx.compose.animation:animation:$compose_version"
     api "androidx.constraintlayout:constraintlayout:$constraint_layout_version"
-    debugApi "androidx.compose.ui:ui-tooling:$compose_version"
+    api "androidx.compose.ui:ui-tooling:$compose_version"
     // Tooling support (Previews, etc.)
     api "androidx.compose.ui:ui-tooling-preview:$compose_version"
     api "androidx.compose.ui:ui:$compose_version"
-    // Foundation (Border, Background, Box, Image, Scroll, shapes, animations, etc.)
-//    api "androidx.compose.foundation:foundation:$compose_version"
-//    // Integration with observables
-//    api "androidx.compose.runtime:runtime-livedata:$compose_version"
 }
-// Allow references to generated code
+
 kapt {
     correctErrorTypes = true
 }

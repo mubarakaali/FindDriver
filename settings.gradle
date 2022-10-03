@@ -1,16 +1,16 @@
 pluginManagement {
-    resolutionStrategy {
-        def redirectModule = [
-                'androidx.navigation.safeargs.kotlin': 'androidx.navigation:navigation-safe-args-gradle-plugin',
-        ]
-
-        eachPlugin {
-            if (redirectModule.containsKey(requested.id.id)) {
-                println "${requested.id.id} --> ${redirectModule.getOrDefault(requested.id.id, requested.id.id)}"
-                useModule("${redirectModule.get(requested.id.id)}:${requested.version}")
-            }
-        }
-    }
+//    resolutionStrategy {
+//        def redirectModule = [
+//                'androidx.navigation.safeargs.kotlin': 'androidx.navigation:navigation-safe-args-gradle-plugin',
+//        ]
+//
+//        eachPlugin {
+//            if (redirectModule.containsKey(requested.id.id)) {
+//                println "${requested.id.id} --> ${redirectModule.getOrDefault(requested.id.id, requested.id.id)}"
+//                useModule("${redirectModule.get(requested.id.id)}:${requested.version}")
+//            }
+//        }
+//    }
     repositories {
         gradlePluginPortal()
         google()

@@ -15,9 +15,9 @@ val DarkPink = Color(0xFFB19696)
 val SomeGreenDegree = Color(0xFFD1DABB)
 
 val colors = lightColors(
-    primary = Blue,
+    primary = Black,
     primaryVariant = DarkBlue,
-    secondary = Black,
+    secondary = LightBlack,
     background = White,
     surface = LightGray,
     onPrimary = Color.White,

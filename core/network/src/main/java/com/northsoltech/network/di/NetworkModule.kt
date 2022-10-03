@@ -61,59 +61,6 @@ object NetworkModule{
             .addConverterFactory(json.asConverterFactory(contentType))
             .build()
     }
-
-//    @Singleton
-//    @Provides
-//    fun getUnsafeOkHttpClient(): OkHttpClient.Builder {
-//        return try {
-//            // Create a trust manager that does not validate certificate chains
-//            val trustAllCerts: Array<TrustManager> = arrayOf(
-//                object : X509TrustManager {
-//                    @Throws(CertificateException::class)
-//                    override fun checkClientTrusted(chain: Array<X509Certificate?>?, authType: String?) {
-//                    }
-//
-//                    @Throws(CertificateException::class)
-//                    override fun checkServerTrusted(chain: Array<X509Certificate?>?, authType: String?) {
-//                    }
-//
-//                    override fun getAcceptedIssuers(): Array<X509Certificate> {
-//                        return arrayOf()
-//                    }
-//                }
-//            )
-//
-//            // Install the all-trusting trust manager
-//            val sslContext: SSLContext = SSLContext.getInstance("SSL")
-//            sslContext.init(null, trustAllCerts, SecureRandom())
-//
-//            // Create an ssl socket factory with our all-trusting manager
-//            val sslSocketFactory: SSLSocketFactory = sslContext.socketFactory
-//            val builder: OkHttpClient.Builder = OkHttpClient.Builder()
-//            builder.sslSocketFactory(sslSocketFactory, trustAllCerts[0] as X509TrustManager)
-//            builder.hostnameVerifier { hostname, session -> true }
-//            builder
-//        } catch (e: Exception) {
-//            throw RuntimeException(e)
-//        }
-//    }
-//
-//    @Singleton
-//    @Provides
-//    fun provideOkHttpClient(@ApplicationContext context: Context): OkHttpClient {
-//        val logger = HttpLoggingInterceptor()
-//        logger.level = if (BuildConfig.DEBUG)
-//            HttpLoggingInterceptor.Level.BODY
-//        else
-//            HttpLoggingInterceptor.Level.NONE
-//        return getUnsafeOkHttpClient()
-//            .callTimeout(120, TimeUnit.SECONDS)
-//            .retryOnConnectionFailure(true)
-//            .addInterceptor(NetWorkConnectionInterceptor(context))
-//            .addInterceptor(logger)
-//            .build()
-//    }
-
     @Provides
     @Singleton
     fun provideLoggingInterceptor() =
@@ -127,9 +74,9 @@ object NetworkModule{
         networkCacheInterceptor: NetworkCacheInterceptor,
     ) =
         OkHttpClient.Builder()
-            .connectTimeout(15L, TimeUnit.SECONDS)
-            .writeTimeout(15L, TimeUnit.SECONDS)
-            .readTimeout(15L, TimeUnit.SECONDS)
+            .connectTimeout(60L, TimeUnit.SECONDS)
+            .writeTimeout(60L, TimeUnit.SECONDS)
+            .readTimeout(60L, TimeUnit.SECONDS)
             .addNetworkInterceptor(networkCacheInterceptor)
             .addInterceptor(interceptor)
             .build()

@@ -27,6 +27,7 @@ fun CustomButton(
     leadingIcon: @Composable () -> Unit = {},
     trailingIcon: @Composable () -> Unit = {},
     onButtonClicked: () -> Unit,
+
 ) {
     Button(
         modifier = modifier,

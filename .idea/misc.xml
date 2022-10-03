@@ -13,10 +13,21 @@
         <entry key="../../../../../../../layout/compose-model-1664047259442.xml" value="0.25" />
         <entry key="../../../../../../../layout/compose-model-1664075300693.xml" value="0.25" />
         <entry key="../../../../../../../layout/compose-model-1664086578507.xml" value="0.32559121621621623" />
+        <entry key="../../../../../../../layout/compose-model-1664390057408.xml" value="0.30092592592592593" />
+        <entry key="../../../../../../../layout/compose-model-1664391756255.xml" value="0.25" />
+        <entry key="../../../../../../../layout/compose-model-1664600113015.xml" value="0.32559121621621623" />
+        <entry key="../../../../../../../layout/compose-model-1664608479313.xml" value="0.2195945945945946" />
+        <entry key="../../../../../../../layout/compose-model-1664615203847.xml" value="0.375" />
+        <entry key="../../../../../../../layout/compose-model-1664689234150.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="feature/sign/src/main/res/drawable/drawable.xml" value="0.256" />
         <entry key="feature/sign/src/main/res/drawable/drawables.xml" value="0.185" />
         <entry key="feature/sign/src/main/res/drawable/ic_baseline_visibility_24.xml" value="0.185" />
+        <entry key="feature/sign/src/main/res/drawable/ic_baseline_visibility_off_24.xml" value="0.256" />
+        <entry key="feature/sign/src/main/res/layout/activity_sign.xml" value="0.3555253623188406" />
         <entry key="feature/sign/src/main/res/layout/fragment_login.xml" value="0.37604166666666666" />
+        <entry key="feature/sign/src/main/res/layout/fragment_signup.xml" value="0.346875" />
+        <entry key="feature/sign/src/main/res/layout/fragment_user_type.xml" value="0.346875" />
         <entry key="framework/src/main/res/drawable/ic_baseline_visibility_24.xml" value="0.185" />
         <entry key="framework/src/main/res/font/gilroy.xml" value="0.1111111111111111" />
       </map>

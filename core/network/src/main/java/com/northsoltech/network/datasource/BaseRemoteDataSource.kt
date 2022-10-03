@@ -2,8 +2,6 @@ package com.northsoltech.network.datasource
 
 import android.util.Log
 import com.northsoltech.domain.models.ApiResource
-import com.northsoltech.network.models.signup.SignupResponseDTO
-import com.northsoltech.network.utils.NetworkUtils.getErrorMessage
 import com.northsoltech.network.utils.NetworkUtils.getNetworkErrorMessage
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
@@ -22,6 +20,7 @@ abstract class BaseRemoteDataSource {
             try {
                 emit(safeApiResult(call.invoke()))
             } catch (e: Exception) {
+                e.printStackTrace()
                 emit(ApiResource.Invalid<T>(message = getNetworkErrorMessage(e)))
             }
         }
@@ -30,7 +29,9 @@ abstract class BaseRemoteDataSource {
     private  fun <T> safeApiResult(response: Response<T>): ApiResource<T>{
         Log.d("jejeje", "BaseRemoteDataSourde safeApiResult: statusCode ${response.code()}")
         return when {
-            response.isSuccessful -> ApiResource.Valid(response.body()!!)
+            response.isSuccessful -> {
+                ApiResource.Valid(response.body()!!)
+            }
             else -> ApiResource.Invalid(message = response.message())
         }
     }

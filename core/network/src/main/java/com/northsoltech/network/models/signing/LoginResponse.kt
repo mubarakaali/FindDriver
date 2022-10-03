@@ -10,15 +10,15 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class LoginResponse(
     @SerialName("data")
-    var `data`: Data?,
+    var loginData: Data?=null,
     @SerialName("message")
     var message: String?,
     @SerialName("statusCode")
     var statusCode: Int?
 ){
     fun toDomain() = LoginData(
-        token = data?.tokenDTO?.toTokenDomain(),
-        user = data?.user?.toUserDomain()
+        token = loginData?.tokenDTO?.toTokenDomain(),
+        user = loginData?.user?.toUserDomain()
     )
 
     private fun TokenDTO.toTokenDomain() = Token(

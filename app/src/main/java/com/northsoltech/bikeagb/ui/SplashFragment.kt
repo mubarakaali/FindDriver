@@ -37,11 +37,8 @@ class SplashFragment : Fragment() {
             viewModel.isTimeOut.collect{
                 if (it){
                     Log.d(JE_TAG, "setObservers: SplashTimeout ")
-                    safelyNavigate(FrameNavGraphDirections.globalActionToOnboarding())
+                    safelyNavigate(FrameNavGraphDirections.globalActionToSigning())
                 }
-            }
-            viewModel.testData.observe(viewLifecycleOwner) {
-                Log.d(JE_TAG, "setObservers:$it")
             }
         }
 

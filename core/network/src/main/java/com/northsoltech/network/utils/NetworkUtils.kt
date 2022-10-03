@@ -9,7 +9,7 @@ internal object NetworkUtils {
     private const val genericNetworkError = "An error occurred getting data from server."
 
     fun getNetworkErrorMessage(e: Exception) = when (e) {
-        is IOException -> "Network not available."
+        is IOException -> "Something went wrong."
         is SocketTimeoutException -> "Request timed out. Try again."
         is UnknownHostException -> "Unable to connect to server."
         else -> genericNetworkError

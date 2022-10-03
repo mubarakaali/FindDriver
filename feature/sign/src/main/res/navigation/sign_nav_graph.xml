@@ -1,11 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/sign_nav_graph"
     app:startDestination="@id/loginFragmentContainer">
 
     <fragment
         android:id="@+id/loginFragmentContainer"
-        android:name="com.northsoltech.sign.LoginFragment"
-        android:label="LoginFragment" />
+        android:name="com.northsoltech.sign.ui.signin.LoginFragment">
+        <action
+            android:id="@+id/action_loginFragmentContainer_to_userTypeFragmentContainer"
+            app:destination="@id/userTypeFragmentContainer"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/userTypeFragmentContainer"
+        android:name="com.northsoltech.sign.ui.signup.UserTypeFragment">
+        <action
+            android:id="@+id/action_userTypeFragmentContainer_to_signupFragmentContainer"
+            app:destination="@id/signupFragmentContainer">
+            <argument
+                android:name="users"
+                app:argType="com.northsoltech.framework.utils.enums.UserType"
+                android:defaultValue="USER"/>
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/signupFragmentContainer"
+        android:name="com.northsoltech.sign.ui.signup.SignupFragment">
+        <argument
+            android:name="users"
+            app:argType="com.northsoltech.framework.utils.enums.UserType"
+            android:defaultValue="USER" />
+        <action
+            android:id="@+id/action_signupFragmentContainer_to_loginFragmentContainer"
+            app:destination="@id/loginFragmentContainer"
+            app:popUpTo="@id/loginFragmentContainer"
+            app:popUpToInclusive="true"/>
+
+    </fragment>
 </navigation>
