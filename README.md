@@ -94,9 +94,35 @@ This is implemented as per [Google's recommendation](https://developer.android.c
 ## Screenshots
 
 <img src="images/splash.jpg" width=200> <img src="images/login.jpg" width=200> 
-<img src="images/usertype.jpg" width=200> <img src="images/registration.jpg" width=200>
+<img src="images/usertype.jpg" width=200> <img src="images/signup.jpg" width=200>
 
 <br/>
+
+## Libraries
+
+- **UI Design** - Compose UI
+- **AndroidX** - Fragments, ViewModel
+- **KotlinX** - Coroutines, Flow, SharedFlow, Serialization
+- **Hilt** -  Dependency Injection
+- **Navigation Component** - User navigation
+- **Retrofit** - API Calls
+- ** DataStore** - Cache token using Preference Datastore and users data using Proto DataStore
+
+
+<br/>
+
+## Future Enhancements
+These are the enhancements that are important but were left because of time constraints:
+
+### Features
+1. Testing Strategy (testing using JUnit4,Mockk,Google Truth,Turbine libraries).
+2. Google place api for pickup and dropoff location. Also get user location using Camera Center of google map
+3. Google map implementation.
+4. Payment api implementation.
+5. send driver location to server using Workmanager
+6. Push Notification
+7. Implement Room database behind the `LocalDataSource` for real caching.
+8. Implement a cache strategy to refresh the cache data at regular intervals
 
 
 
