@@ -106,7 +106,7 @@ This is implemented as per [Google's recommendation](https://developer.android.c
 - **Hilt** -  Dependency Injection
 - **Navigation Component** - User navigation
 - **Retrofit** - API Calls
-- ** DataStore** - Cache token using Preference Datastore and users data using Proto DataStore
+- **DataStore** - Cache token using Preference Datastore and users data using Proto DataStore
 
 
 <br/>
