@@ -1,4 +1,4 @@
-# Welcome to BikeaGB
+# Welcome to FindDriver
 
 It's an app built using the MVVM, Repository pattern and Clean Architecture with JetPack Compose for UI Presentation,that show user registration.
 
