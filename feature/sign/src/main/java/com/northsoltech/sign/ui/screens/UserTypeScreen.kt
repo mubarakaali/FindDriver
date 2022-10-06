@@ -9,6 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.tooling.preview.Preview
@@ -45,9 +46,9 @@ fun UserTypeScreen(
             modifier = Modifier
                 .height(Dimension.xlIcon)
                 .width(Dimension.xlIcon),
-            imageVector =ImageVector.vectorResource(id = R.drawable.ic_baseline_visibility_24) ,
+            painter = painterResource(id = com.northsoltech.framework.R.drawable.ic_cap) ,
             contentDescription = "app_icon")
-        Spacer(modifier = Modifier.height(Dimension.pagePadding.times(2)))
+        Spacer(modifier = Modifier.height(Dimension.pagePadding))
         MediumTitleText(title = stringResource(id = R.string.are_you))
         Spacer(modifier = Modifier.height(Dimension.pagePadding.times(2)))
         CustomButton(

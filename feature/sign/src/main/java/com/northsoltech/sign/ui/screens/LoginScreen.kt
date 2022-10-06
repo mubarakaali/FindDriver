@@ -1,5 +1,6 @@
 package com.northsoltech.sign.ui.screens
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.KeyboardActions
@@ -13,9 +14,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
@@ -23,6 +26,7 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import com.northsoltech.framework.components.CustomButton
 import com.northsoltech.framework.components.MainTitleText
+import com.northsoltech.framework.components.MediumTitleText
 import com.northsoltech.framework.states.UiState
 import com.northsoltech.framework.ui.theming.Dimension
 import com.northsoltech.sign.R
@@ -57,8 +61,15 @@ fun LoginScreen(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        MainTitleText(title = stringResource(com.northsoltech.framework.R.string.appname))
-        Spacer(modifier = Modifier.height(Dimension.pagePadding.times(3)))
+        Image(
+            modifier = Modifier
+                .height(Dimension.xlIcon)
+                .width(Dimension.xlIcon),
+            painter = painterResource(id = com.northsoltech.framework.R.drawable.ic_cap) ,
+            contentDescription = "app_icon")
+        Spacer(modifier = Modifier.height(Dimension.pagePadding))
+        MediumTitleText(title = stringResource(com.northsoltech.framework.R.string.appname))
+        Spacer(modifier = Modifier.height(Dimension.pagePadding.times(2)))
         OutlinedTextField(
             value = phoneNo,
             textStyle = TextStyle(
@@ -160,7 +171,7 @@ fun LoginScreen(
                 .padding(start = Dimension.pagePadding.times(2),
                     end = Dimension.pagePadding.times(2))
                 .shadow(elevation = Dimension.zero,
-                shape = MaterialTheme.shapes.small),
+                    shape = MaterialTheme.shapes.small),
             padding = PaddingValues(Dimension.pagePadding.div(2)),
             buttonColor = MaterialTheme.colors.background,
             contentColor = MaterialTheme.colors.secondary,

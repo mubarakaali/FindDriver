@@ -1,5 +1,6 @@
 package com.northsoltech.sign.ui.screens
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.KeyboardActions
@@ -15,9 +16,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
@@ -76,8 +79,15 @@ fun SignupScreen(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+        Image(
+            modifier = Modifier
+                .height(Dimension.xlIcon)
+                .width(Dimension.xlIcon),
+            painter = painterResource(id = com.northsoltech.framework.R.drawable.ic_cap) ,
+            contentDescription = "app_icon")
+        Spacer(modifier = Modifier.height(Dimension.pagePadding))
         MediumTitleText(title = stringResource(R.string.registration))
-        Spacer(modifier = Modifier.height(Dimension.pagePadding.times(3)))
+        Spacer(modifier = Modifier.height(Dimension.pagePadding.times(2)))
 
         OutlinedTextField(
             value = name,

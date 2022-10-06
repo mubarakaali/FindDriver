@@ -96,6 +96,7 @@ This is implemented as per [Google's recommendation](https://developer.android.c
 <img src="images/splash.jpg" width=200> <img src="images/login.jpg" width=200> 
 <img src="images/usertype.jpg" width=200> <img src="images/signup.jpg" width=200>
 
+
 <br/>
 
 ## Libraries
